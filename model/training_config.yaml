@@ -1,0 +1,29 @@
+# Training Configuration for Precision Transformer
+model_name: 'PrecisionTransformer'
+
+# Model Architecture
+layers:
+  - d_model: 8
+    n_heads: 1
+    d_ff: 1024
+  # - d_model: 8
+  #   n_heads: 1
+  #   d_ff: 1024
+
+
+
+# Training Parameters
+training:
+  seq_len: 25
+  batch_size: 1024
+  learning_rate: 0.001
+  num_epochs: 30000
+  optimizer: 'adam'
+  beta1: 0.9
+  beta2: 0.98
+  # dropout: 0.1
+  label_smoothing: 0.1
+  device: 'mps'
+
+
+
